@@ -3,7 +3,7 @@ import { User } from '../models/User.js';
 
 export function requireAuth(req, res, next) {
   const authHeader = req.headers.authorization || '';
-  const [, token] = authHeader.split(' '); // "Bearer <token>"
+  const [, token] = authHeader.split(' '); // "Berer <token>"
   if (!token) return res.status(401).json({ message: 'Missing token' });
 
   try {
